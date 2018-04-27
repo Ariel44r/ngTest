@@ -8,6 +8,8 @@ import { CardsComponent } from './cards/cards.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,7 +26,9 @@ const appRoutes: Routes = [
     CardsComponent,
     LoginComponent,
     HomeComponent,
-    SignupComponent
+    SignupComponent,
+    DashboardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -12,4 +12,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  console(event) {
+    console.log(event)
+    //alert("hola mamá!")
+  }
 }
