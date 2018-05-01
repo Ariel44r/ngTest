@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as C from '../Models/Utils/Constants';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  _c = C;
   constructor() { }
 
   ngOnInit() {

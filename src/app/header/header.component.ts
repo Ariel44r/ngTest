@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Language } from '../Models/Language';
+import * as C from '../Models/Utils/Constants';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { Language } from '../Models/Language';
 export class HeaderComponent implements OnInit {
 
   lang = Language.getInstance();
+  _c = C;
   constructor() { }
 
   ngOnInit() {
@@ -20,7 +22,7 @@ export class HeaderComponent implements OnInit {
   }
 
   setLang() {
-    localStorage.setItem("langCVFranklin", localStorage.getItem("langCVFranklin") == "Spanish" ? "English" : "Spanish");
+    localStorage.setItem(C.KEY_LANG, localStorage.getItem(C.KEY_LANG) == "Spanish" ? "English" : "Spanish");
     this.lang = Language.getInstance();
   }
 }
