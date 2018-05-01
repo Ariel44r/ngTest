@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Language } from '../Models/Language';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  lang = Language.getInstance();
   constructor() { }
 
   ngOnInit() {
@@ -15,5 +17,10 @@ export class HeaderComponent implements OnInit {
   console(event) {
     console.log(event)
     //alert("hola mamá!")
+  }
+
+  setLang() {
+    localStorage.setItem("langCVFranklin", localStorage.getItem("langCVFranklin") == "Spanish" ? "English" : "Spanish");
+    this.lang = Language.getInstance();
   }
 }
