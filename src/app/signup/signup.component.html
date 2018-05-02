@@ -14,14 +14,18 @@
               <a><img class="profile-img" src="/assets/img/dogRight.png" alt="" width="150" height="150" routerLink="/home"></a>
               <form class="form-signin">
                 <br/>
-                <input type="text" class="form-control" placeholder="Email" required autofocus>
+                {{ lang.eMail }}
+                <input type="text" class="form-control" required autofocus>
                 <br/>
-                <input type="password" class="form-control" placeholder="Password" required>
+                {{ lang.password }}
+                <input type="password" class="form-control" required>
                 <br/>
-                <input type="password" class="form-control" placeholder="Confirm Password" required>
+                {{ lang.confirmPassword }}
+                <input type="password" class="form-control" required>
                 <br/>
                 <button class="btn btn-success btn-lg btn-block" type="submit">{{ lang.signup }}</button>
                 <label class="checkbox pull-left">
+                  <br/>
                   <input type="checkbox" value="remember-me">
                     {{ lang.termsAndConditions }}
                     <a href="#" class="pull-right need-help">{{ lang.termsAndConditionsLink }}</a><span class="clearfix"></span>

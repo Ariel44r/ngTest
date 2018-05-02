@@ -18,6 +18,11 @@ export class Language {
     
     public searchBar: String;
     public setLang: String;
+
+    //Login&Signup
+    public eMail: String;
+    public password: String;
+    public confirmPassword: String;
     
     public constructor() { }
     
@@ -36,6 +41,11 @@ export class Language {
 
         Language.instance.searchBar = Language.instance.setWords("Buscar", "Search");
         Language.instance.setLang = Language.instance.setWords("On English", "En Español");
+
+        //Login&Signup
+        Language.instance.eMail = Language.instance.setWords('Correo electrónico', 'E-mail');
+        Language.instance.password = Language.instance.setWords('Contraseña', 'Password');
+        Language.instance.confirmPassword = Language.instance.setWords('Confirmar contraseña', 'Confirm password');
         return Language.instance;
     }
 
