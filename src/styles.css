@@ -1,5 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: rgb(240, 236, 236);
+    background-color: rgb(250, 247, 247);
 }
-@import '~bootstrap/dist/css/bootstrap.css'
+@import '~bootstrap/dist/css/bootstrap.css';
+
+@font-face {
+    font-family: 'Rochester-Regular';
+    src: url('/assets/font/Rochester-Regular.ttf');
+}
+
+.Rochester-Bold {
+    font-family: Rochester-Regular;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.Rochester-Bold-Max {
+    font-family: Rochester-Regular;
+    font-size: 250%;
+    font-weight: bold;
+}
