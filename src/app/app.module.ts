@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, ActivatedRoute } from '@angular/router'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'link', component: HeaderComponent, canActivate: [AuthService] }
+  { path: 'link', component: HeaderComponent, canActivate: [AuthService] },
+  { path: 'dashboard', component: DashboardComponent }
 ]
 
 localStorage.setItem("langCVFranklin", "Spanish");
@@ -39,7 +41,9 @@ localStorage.setItem("langCVFranklin", "Spanish");
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
